@@ -58,6 +58,7 @@ void setup()
     while (1);
   }
 
+  //repeat for each current setting
   //void setup(byte powerLevel = 0x1F, byte sampleAverage = 4, byte ledMode = 3, int sampleRate = 400, int pulseWidth = 411, int adcRange = 4096);
   particleSensor.setup(0xFF,4, 3, 50, 411, 4096); //Configure sensor. Use 6.4mA for LED drive
   
@@ -91,7 +92,7 @@ void loop()
       if(noOfSamples==100){
         Serial.println(currentNo);
         Serial.print("[HTTP] begin...\n");
-        http.begin("http://"+host+":80/assignment1.php");
+        http.begin("http://"+host+":80/assignment2.php");
         Serial.println("[HTTP] POST...\n");
         http.addHeader("Content-Type","text/plain");
         
