@@ -77,7 +77,7 @@ HR_array = []
 for i in HR_diff:
     HR_array.append(3000.0/i);    #Instantaneous Heart rate
 print "Instantaneous Heart Rate"
-print np.around(HR_array[2:],4)
+print np.around(HR_array[3:],4)
 
 #Heart rate
 print "Average Heart Rate: ", np.around(np.mean(HR_array[2:]),4)
