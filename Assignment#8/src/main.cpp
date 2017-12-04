@@ -99,7 +99,7 @@ void loop()
         //Appending to data in the form of lines red,IR, accumulating samples in 100
         data = data + String(float(ir)) + ',' + String(float(red)) + ',' +String(myIMU.readFloatAccelX()) +','+String(myIMU.readFloatAccelY())+ ',' + String(myIMU.readFloatAccelZ()) +'\n';
         noOfSamples++;
-        if(noOfSamples==80){
+        if(noOfSamples==100){
           http.begin("http://"+host+":80/assignment8.php");
           http.addHeader("Content-Type","text/plain");
           httpCode = http.POST(data);   //Send the request
